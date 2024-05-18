@@ -1,0 +1,40 @@
+@media (min-width: 487px) {
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .container .markdown_container,
+  .container .preview_container {
+    /* flex-basis: 50%; */
+    width: 50%;
+    height: 100vh;
+  }
+}
+/* MARKDOWN_CONTAINER */
+.markdown_container {
+  border-right: 2px solid black;
+}
+.markdown_container textarea {
+  resize: none;
+  width: 100%;
+  height: 90%;
+  outline: none;
+  border: none;
+  /* background-color: black; */
+}
+/* PREVIEW_CONTAINER */
+.preview_container ul {
+  display: flex;
+  margin: 0;
+}
+.preview_container ul li:not(.editor li) {
+  list-style: none;
+  padding: 0 5px;
+  color: rgba(255, 255, 255, 0.464);
+  cursor: pointer;
+}
+/* EDITOR */
+.editor {
+  width: 100%;
+  word-wrap: break-word;
+}
