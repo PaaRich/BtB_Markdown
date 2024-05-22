@@ -4,6 +4,7 @@ import { RiMenuFill } from "react-icons/ri";
 import { MdOutlineClose } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { CiFileOn } from "react-icons/ci";
+import { IoSaveOutline } from "react-icons/io5";
 
 const Title = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -31,7 +32,8 @@ const Title = () => {
         <div className={`${styles.dltBtn} rounded-circle`}>
           <RiDeleteBin6Line className="m-2" />
         </div>
-        <button className="px-2 py-1 ms-3 border-0 text-white fw-medium rounded-1">
+        <button className=" d-flex align-items-center px-2 py-1 ms-3 border-0 text-white fw-medium rounded-1">
+          <IoSaveOutline size={22} className="me-2" />
           Save changes
         </button>
       </div>

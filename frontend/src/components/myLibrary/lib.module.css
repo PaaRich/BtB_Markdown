@@ -1,0 +1,13 @@
+.item {
+  margin: 0 auto;
+  width: 50%;
+}
+.item ul li {
+  list-style: none;
+  text-decoration: none;
+  display: inline;
+  cursor: pointer;
+}
+.item ul li:hover {
+  color: red;
+}
