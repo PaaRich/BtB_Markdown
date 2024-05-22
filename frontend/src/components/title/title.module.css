@@ -1,0 +1,29 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.container h6 {
+  border-right: 2px solid rgba(255, 255, 255, 0.274);
+  letter-spacing: 4px;
+}
+.container button {
+  background-color: rgba(255, 0, 0, 0.845);
+  transition-duration: 0.5s;
+}
+.container button:hover {
+  background-color: rgba(255, 0, 0, 0.457);
+}
+.menuBtn {
+  transition-duration: 0.5s;
+  background-color: rgba(255, 255, 255, 0.108);
+  cursor: pointer;
+}
+.menuBtn:hover {
+  background-color: rgba(255, 255, 255, 0.302);
+}
+.dltBtn {
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.dltBtn:hover {
+  background-color: rgba(255, 255, 255, 0.177);
+}
