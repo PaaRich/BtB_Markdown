@@ -1,13 +1,16 @@
 import Editor from "./Editor";
 import { useState } from "react";
 import styles from "./markdown.module.css";
+import { IoEyeOutline } from "react-icons/io5";
 
 const Markdown = () => {
   const [markdown, setMarkdown] = useState<string>("");
   return (
-    <div className={`${styles.container} `}>
+    <section className={`${styles.container} `}>
       <div className={`${styles.markdown_container}`}>
-        <div className="p-2 bg-black text-white fw-medium fs-4">Markdown</div>
+        <h6 className={`${styles.letter_space} p-3 m-0 text-white fw-medium`}>
+          MARKDOWN
+        </h6>
         {/* <input type="text" /> */}
         <textarea
           placeholder="Type your markdown"
@@ -17,18 +20,17 @@ const Markdown = () => {
         />
       </div>
       <div className={styles.preview_container}>
-        <div className="p-2 bg-black d-flex justify-content-between align-items-center">
-          <h4 className="text-white">Preview</h4>
-          <ul>
-            <li>Save</li>
-            <li>New</li>
-            <li>Library</li>
-            <li>Open</li>
-          </ul>
+        <div
+          className={`${styles.letter_space} d-flex align-items-center justify-content-between p-3 text-white fw-medium`}
+        >
+          <h6 className="m-0 p-0">PREVIEW</h6>
+
+          <IoEyeOutline className={styles.eye} />
         </div>
+
         <Editor markdown={markdown} />
       </div>
-    </div>
+    </section>
   );
 };
 
