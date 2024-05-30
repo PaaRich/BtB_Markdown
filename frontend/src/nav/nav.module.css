@@ -1,0 +1,127 @@
+.open {
+  left: 0;
+  opacity: 1;
+}
+.close {
+  left: -100%;
+  opacity: 0;
+}
+.d_block {
+  opacity: 1;
+  z-index: 1000;
+}
+.d_none {
+  opacity: 0;
+  z-index: -1000;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: -18%;
+  background-color: var(--red-color);
+  width: 45px;
+  height: 58px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.menu:hover {
+  background-color: var(--red-color);
+}
+.container {
+  width: 250px;
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  background-color: var(--nav-bg);
+  height: 100vh;
+  color: white;
+  text-align: left;
+  transition-duration: 0.7s;
+}
+.container .myDoc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.377);
+}
+.container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 85%;
+  height: 100%;
+}
+.container > div div:nth-child(2) p:first-of-type {
+  color: rgba(255, 255, 255, 0.591);
+}
+.item {
+  border-radius: 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.109);
+}
+.item:hover p:nth-child(2) {
+  color: var(--red-color);
+}
+.container button {
+  background-color: var(--red-color);
+  border: none;
+  width: 90%;
+  transition-duration: 0.5s;
+  /* text-wrap: nowrap; */
+}
+.container button:focus {
+  outline: none;
+}
+.container button:hover {
+  background-color: var(--lightRed-color);
+}
+.parent {
+  position: relative;
+  border-radius: 50px;
+  padding: 6px;
+  height: 15px;
+  width: 28px;
+  margin: 0 8px;
+  background-color: rgba(255, 255, 255, 0.434);
+  cursor: pointer;
+}
+.parent div {
+  transition-property: 0.5s;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+  background-color: white;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.child_toggle {
+  position: absolute;
+  top: 50%;
+  right: 13%;
+  transform: translate(-13%, -50%);
+  background-color: white;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+.on {
+  color: white;
+}
+.off {
+  color: rgba(255, 255, 255, 0.401);
+}

@@ -1,29 +1,57 @@
 .container {
-  background-color: rgba(0, 0, 0, 0.835);
+  background-color: var(--title-bg);
 }
 .container h6 {
-  border-right: 2px solid rgba(255, 255, 255, 0.274);
+  border-right: 1px solid rgba(255, 255, 255, 0.274);
   letter-spacing: 4px;
 }
 .container button {
-  background-color: rgba(255, 0, 0, 0.845);
+  background-color: var(--red-color);
   transition-duration: 0.5s;
+  text-wrap: nowrap;
 }
 .container button:hover {
-  background-color: rgba(255, 0, 0, 0.457);
+  background-color: var(--lightRed-color);
 }
 .menuBtn {
   transition-duration: 0.5s;
   background-color: rgba(255, 255, 255, 0.108);
   cursor: pointer;
+  position: relative;
 }
 .menuBtn:hover {
-  background-color: rgba(255, 255, 255, 0.302);
+  background-color: var(--red-color);
 }
 .dltBtn {
   cursor: pointer;
   transition-duration: 0.5s;
 }
 .dltBtn:hover {
-  background-color: rgba(255, 255, 255, 0.177);
+  color: var(--red-color);
+}
+.title {
+  width: 10rem;
+  transition-duration: 0.5s;
+}
+.title label span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.461);
+}
+.title input {
+  width: 15rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.title input:hover {
+  border-bottom: 1px solid white;
+}
+.title input:focus {
+  outline: none;
+}
+@media (max-width: 468px) {
+  .title input {
+    width: 100%;
+  }
 }

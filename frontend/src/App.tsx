@@ -1,15 +1,12 @@
-import Title from "./components/title/Title";
 import Markdown from "./components/markdown/Markdown";
-import Library from "./components/myLibrary/Library";
-import Save from "./components/markdown/Save";
+import { useState } from "react";
+//import Del from "./components/markdown/Del";
 function App() {
+  const [toggleBg, setToggleBg] = useState<boolean>(true);
   return (
-    <div>
-      <Title />
-      <Markdown />
-      <Library />
-      <Save />
-    </div>
+    <>
+      <Markdown toggleBg={toggleBg} setToggleBg={setToggleBg} />
+    </>
   );
 }
 

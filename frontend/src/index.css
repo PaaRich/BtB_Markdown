@@ -1,9 +1,17 @@
+:root {
+  --red-color: rgb(228, 102, 67);
+  --lightRed-color: rgb(243, 151, 101);
+  --white-color: rgb(255, 255, 255);
+  --dimWhite-color: rgb(245, 245, 245);
+  --title-bg: rgb(49, 50, 53);
+  --nav-bg: rgb(43, 45, 49);
+  --mk-head-bg: rgb(29, 31, 34);
+  --markdown-bg: rgb(21, 22, 25);
+}
+
 * {
   font-family: "Roboto", sans-serif;
-}
-body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: red;
+  box-sizing: border-box;
 }
