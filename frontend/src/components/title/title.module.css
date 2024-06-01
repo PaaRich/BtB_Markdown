@@ -6,10 +6,16 @@
   letter-spacing: 4px;
 }
 .container button {
-  background-color: var(--red-color);
+  background-color: rgba(255, 255, 255, 0.165);
   transition-duration: 0.5s;
   text-wrap: nowrap;
+  pointer-events: none;
 }
+.container button.positive {
+  background-color: var(--red-color);
+  pointer-events: all;
+}
+
 .container button:hover {
   background-color: var(--lightRed-color);
 }

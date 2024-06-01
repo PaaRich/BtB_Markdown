@@ -12,10 +12,12 @@ interface SetOpen {
   open: boolean;
   toggleDel: boolean;
   setToggleDel: Function;
+  markdown: string;
 }
 const Title = (props: SetOpen) => {
   const [name, setName] = useState<string>("Welcome.md");
   const localOpen = props.open;
+  const positive = props.markdown.length > 2;
   return (
     <div
       className={`${styles.container} d-flex align-items-center justify-content-between pe-3 text-white`}
@@ -43,7 +45,10 @@ const Title = (props: SetOpen) => {
           <label>
             <span className="d-none d-md-block">Document name</span>
             <input
+              maxLength={20}
+              minLength={2}
               type="text"
+              pattern="[a-zA-Z]*"
               className="text-white mt-0"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -59,7 +64,11 @@ const Title = (props: SetOpen) => {
         >
           <RiDeleteBin6Line className="m-0 m-md-2" />
         </div>
-        <button className=" d-flex align-items-center px-2 py-1 ms-3 border-0 text-white fw-medium rounded-1">
+        <button
+          className={`${
+            positive && styles.positive
+          }  d-flex align-items-center px-2 py-1 ms-3 border-0 text-white fw-medium rounded-1`}
+        >
           <IoSaveOutline size={22} className="me-0 me-md-2" />
           <span className="d-none d-md-block">Save changes</span>
         </button>

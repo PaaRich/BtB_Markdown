@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 
 interface Editor {
   markdown: string;
-  theToggle: boolean | string;
+  toggle: boolean | string;
   toggleBg: boolean;
 }
 const Editor = (props: Editor) => {
@@ -12,7 +12,7 @@ const Editor = (props: Editor) => {
     <div
       className={`${props.toggleBg ? styles.off : styles.on} ${styles.editor}`}
     >
-      <div className={props.theToggle ? styles.centerPreview : ""}>
+      <div className={props.toggle ? styles.centerPreview : ""}>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
           {props.markdown}
         </ReactMarkdown>

@@ -21,7 +21,7 @@
   position: absolute;
   top: 0;
   right: -18%;
-  background-color: var(--red-color);
+  background-color: var(--nav-bg);
   width: 45px;
   height: 58px;
   transition: 0.5s;

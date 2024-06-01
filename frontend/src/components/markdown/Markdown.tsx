@@ -11,9 +11,13 @@ interface BgToggle {
   setToggleBg: Function;
 }
 const Markdown = (props: BgToggle) => {
+  //markdown input
   const [markdown, setMarkdown] = useState<string>("");
+  //toggle nav component
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  //toggle preview component
   const [toggle, setToggle] = useState<boolean>(false);
+  //toggle delete component
   const [toggleDel, setToggleDel] = useState<boolean>(false);
 
   return (
@@ -27,7 +31,9 @@ const Markdown = (props: BgToggle) => {
 
       {/* HOMEPAGE */}
       <div
-        className={`${styles.homePage_container} ${toggleDel && styles.dim}`}
+        className={`${styles.homePage_container} ${toggleDel && styles.dim} ${
+          isOpen && styles.dim
+        }`}
       >
         {/* TITLE BAR */}
         <Title
@@ -36,10 +42,12 @@ const Markdown = (props: BgToggle) => {
           setOpen={setIsOpen}
           setToggle={setToggle}
           open={isOpen}
+          markdown={markdown}
         />
 
-        {/* MARKDOWN */}
+        {/* MARKDOWN & PREVIEW */}
         <div className={styles.container}>
+          {/* MARKDOWN */}
           <div
             className={`${styles.markdown_container} ${
               toggle && styles.markdown_toggle
@@ -55,17 +63,6 @@ const Markdown = (props: BgToggle) => {
                 onClick={() => setToggle(!toggle)}
                 className={styles.eye}
               />
-              {/* {toggle ? (
-                <FaRegEyeSlash
-                  onClick={() => setToggle(!toggle)}
-                  className={styles.eye}
-                />
-              ) : (
-                <IoEyeOutline
-                  onClick={() => setToggle(!toggle)}
-                  className={styles.eye}
-                />
-              )} */}
             </div>
             <textarea
               autoFocus
@@ -104,7 +101,7 @@ const Markdown = (props: BgToggle) => {
             <Editor
               toggleBg={props.toggleBg}
               markdown={markdown}
-              theToggle={toggle}
+              toggle={toggle}
             />
           </div>
         </div>

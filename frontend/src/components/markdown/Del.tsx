@@ -5,7 +5,7 @@ interface Del {
   toggleDel: boolean;
 }
 const Del = (props: Del) => {
-  //const [name, setName] = useState<string>("");
+
   return (
     <div
       className={`${styles.del_container} ${
